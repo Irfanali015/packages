@@ -1,0 +1,27 @@
+---
+- name:
+  hosts: localhost
+  tasks:
+    - name:
+      yum:
+        name: "{{item}}"
+        state: latest
+      loop:
+        - php
+        - mariadb
+- name:
+  hosts: localhost
+  tasks:
+    - name:
+      yum:
+        name: "@Development Tools"
+        state: latest
+- name:
+  hosts: localhost
+  tasks:
+    - name:
+      yum:
+        name: "*"
+        state: latest
+        exclude: kernel*
+...        

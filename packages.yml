@@ -1,6 +1,6 @@
 ---
 - name:
-  hosts: localhost
+  hosts: git.example.com
   tasks:
     - name:
       yum:
